@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-// styled components - criar um componente estilizado // 
+// styled components - criar um componente estilizado //
+// vantagem styled components - estilização fica dentro do escopo do componente //  
 const Title = styled.h1 `
   font-size: 64px;
   color: #8257e6;
