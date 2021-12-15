@@ -5,6 +5,9 @@ import { Header } from "./components/Header";
 
 import { GlobalStyle } from "./styles/global";
 
+// acessibilidade - modal dentro do elemento root // 
+Modal.setAppElement('#root');
+
 export function App() {
   // modal //
   const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false); // modal fechado // 
