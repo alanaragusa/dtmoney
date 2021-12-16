@@ -31,7 +31,7 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 
 ```bash
 # Abra um terminal e copie este repositório com o comando
-git clone https://github.com/martins-rafael/dtmoney.git
+git clone https://github.com/alanaragusa/dtmoney.git
 # ou use a opção de download.
 
 # Entre na pasta web com 
