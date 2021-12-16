@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 import closeImg from '../../assets/close.svg';
 import incomeImg from '../../assets/income.svg';
 import outcomeImg from '../../assets/outcome.svg';
-import { Container, TransactionTypeContainer } from './styles';
+import { Container, TransactionTypeContainer, RadioBox } from './styles';
 
 interface NewTransactionModalProps {
     isOpen: boolean;
@@ -11,7 +11,7 @@ interface NewTransactionModalProps {
 }
 
 export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionModalProps) {
-  // informação dos botões income e outcome - estado muda quando for clicado (arrow function do useState lá no onClick do botão mesmo //
+  // informação dos botões income e outcome - estado muda quando for clicado (arrow function do useState lá no onClick do botão RadioBox mesmo //
   const [type, setType] = useState('deposit');
 
   return(
@@ -38,21 +38,23 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
         <input type="number" placeholder="Valor" />
 
         <TransactionTypeContainer>
-          <button 
+          <RadioBox 
           type="button" 
           onClick={() => {setType('deposit'); }}
+          isActive={type === 'deposit'} // estilização de um styled component por uma propriedade - no arquivo de styles tem uam interface RadioBoxProps //
           >
             <img src={incomeImg} alt="Entrada" />
             <span>Entrada</span>
-          </button>
+          </RadioBox>
 
-          <button 
+          <RadioBox 
           type="button" 
           onClick={() => {setType('withdraw'); }}
+          isActive={type === 'withdraw'}
           >
             <img src={outcomeImg} alt="Saída" />
             <span>Saída</span>
-          </button>
+          </RadioBox>
         </TransactionTypeContainer>
 
         <input placeholder="Categoria" />
