@@ -27,7 +27,7 @@ O dtmoney é uma aplicação de para o gerenciamento financeiro, permitindo o ca
 
 Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/CfJk9VnctM7Y0jfVeNBS6A/dtmoney-Ignite-Rocketseat?node-id=1%3A863). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
-## Instalação e uso
+## :open_file_folder: Instalação e uso
 
 ```bash
 # Abra um terminal e copie este repositório com o comando
