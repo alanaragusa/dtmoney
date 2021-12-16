@@ -42,6 +42,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
           type="button" 
           onClick={() => {setType('deposit'); }}
           isActive={type === 'deposit'} // estilização de um styled component por uma propriedade - no arquivo de styles tem uam interface RadioBoxProps //
+          activeColor="green" // informar a cor do botão como uma propriedade //
           >
             <img src={incomeImg} alt="Entrada" />
             <span>Entrada</span>
@@ -51,6 +52,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
           type="button" 
           onClick={() => {setType('withdraw'); }}
           isActive={type === 'withdraw'}
+          activeColor="red"
           >
             <img src={outcomeImg} alt="Saída" />
             <span>Saída</span>
