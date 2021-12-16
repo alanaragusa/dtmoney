@@ -1,7 +1,6 @@
 import { FormEvent, useState, useContext } from 'react';
 import Modal from 'react-modal';
 import { TransactionsContext } from '../../TransactionsContext';
-import { api } from '../../services/api';
 
 import closeImg from '../../assets/close.svg';
 import incomeImg from '../../assets/income.svg';
@@ -27,15 +26,17 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
   const [type, setType] = useState('deposit');
 
   // salvar o estado dos inputs no componente para inserção na api //
-  function handleCreateNewTransaction(event: FormEvent) {
+  async function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault(); // parar o carregamento padrão do html //
 
-    createTransaction({
+    await createTransaction({
       title,
       amount,
       category, 
       type,
     })
+
+    onRequestClose();
   } 
     
   return(
